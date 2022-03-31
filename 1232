@@ -1,0 +1,24 @@
+n, m = map(int, input().split()) # строк, столбцов
+big = []
+sumstr = []
+sumstolb = []
+for g in range(n):
+    sp = []
+    sp = list(map(int, input().split()))
+    sumst = sum(sp)
+    sumstr.append(sumst)
+    big.append(sp)
+for j in range(m):
+    sumstol = 0
+    for i in range(n):
+        nsp = big[i][j]
+        sumstol += nsp
+    sumstolb.append(sumstol)
+
+print(*sumstr)
+print(*sumstolb)
+print(" ")
+
+for k in range(n):
+    fsp = big[k]
+    print(*fsp)
