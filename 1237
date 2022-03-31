@@ -1,0 +1,25 @@
+n, m = map(int, input().split()) # строк, столбцов
+
+big1 = []
+big2 = []
+
+for y in range(n):
+    sp = []
+    sp = list(map(int, input().split()))
+    big1.append(sp)
+
+s = input()
+
+for u in range(n):
+    sp = []
+    sp = list(map(int, input().split()))
+    big2.append(sp)
+
+for j in range(n):
+    spc1 = big1[j]
+    spc2 = big2[j]
+    spc = []
+    for i in range(m):
+        counter = spc1[i] + spc2[i]
+        spc.append(counter)
+    print(*spc)
