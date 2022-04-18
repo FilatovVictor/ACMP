@@ -1,0 +1,23 @@
+#not done
+l = int(input())
+sp = list(map(int, input().split()))
+spn = sorted(sp)
+mn = spn[1] - spn[0]
+spr = [mn]
+spch = [[spn[0], spn[1]]]
+print(spn)
+for j in range(l-1):
+    small = spn[j]
+    for i in range(l-1):
+        big = spn[i+1]
+        print(big, "-", small, "=", abs(big-small))
+        if abs(big-small) <= mn:
+            a = []
+            a.append(small)
+            a.append(big)
+            spch.append(a)
+            spr.append(abs(big-small))
+            mn = abs(big-small)
+
+print(spr)
+print(spch)
