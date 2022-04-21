@@ -1,0 +1,14 @@
+n = int(input())
+f = 0
+def IsPrime(i):
+    d = 2
+    while d * d <= i and i % d != 0:
+        d += 1
+    return d * d > i
+
+for i in range(n+1, 2*n):
+    if IsPrime(i):
+        f += 1
+
+print(f)
+
